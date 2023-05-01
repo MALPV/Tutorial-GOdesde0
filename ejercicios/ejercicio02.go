@@ -10,24 +10,29 @@ import (
 var num int
 var err error
 
-func CalculateMultiplicationTable() {
+func CalculateMultiplicationTable() string {
 
 	scanner := bufio.NewScanner(os.Stdin)
 
+	var text string
+
 	for {
 		fmt.Println("Ingrese un numero")
+
 		if scanner.Scan() {
 			num, err = strconv.Atoi(scanner.Text())
-	
+
 			if err != nil {
 				fmt.Println("El valor ingresado es incorrecto")
-			}else{
+			} else {
 				break
 			}
 		}
 	}
 
 	for i := 1; i <= 10; i++ {
-		fmt.Println(i, "x", num, "=", i*num)
+		text += fmt.Sprintf("%d x %d = %d \n", i, num, i*num)
 	}
+
+	return text
 }
