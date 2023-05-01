@@ -48,9 +48,13 @@ func main() {
 
 		fmt.Println(ejercicios.CalculateMultiplicationTable())
 
+		files.SaveTable()
+
+		files.AddNewTable()
+
 	} else {
 
-		files.SaveTable()
+		files.ReadFile()
 
 	}
 }
