@@ -43,9 +43,11 @@ func main() {
 
 		teclado.MultiplyNumbers()
 
+		iteraciones.Iterar()
+
 	} else {
 
-		iteraciones.Iterar()
+		ejercicios.CalculateMultiplicationTable()
 
 	}
 }
