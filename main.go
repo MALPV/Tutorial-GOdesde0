@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"runtime"
 
+	"github.com/MALPV/Tutorial-Godesde0/ejercicios"
 	"github.com/MALPV/Tutorial-Godesde0/variables"
 )
 
@@ -29,4 +30,6 @@ func main() {
 	default:
 		fmt.Printf("%s \n", os)
 	}
+
+	fmt.Println(ejercicios.ConvertToInt("1998"))
 }
