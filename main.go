@@ -5,6 +5,7 @@ import (
 	"runtime"
 
 	"github.com/MALPV/Tutorial-Godesde0/ejercicios"
+	"github.com/MALPV/Tutorial-Godesde0/teclado"
 	"github.com/MALPV/Tutorial-Godesde0/variables"
 )
 
@@ -32,4 +33,6 @@ func main() {
 	}
 
 	fmt.Println(ejercicios.ConvertToInt("1998"))
+
+	teclado.MultiplyNumbers()
 }
