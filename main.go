@@ -5,6 +5,7 @@ import (
 	"runtime"
 
 	"github.com/MALPV/Tutorial-Godesde0/arreglos_slices"
+	"github.com/MALPV/Tutorial-Godesde0/defer_panic"
 	"github.com/MALPV/Tutorial-Godesde0/ejercicios"
 	"github.com/MALPV/Tutorial-Godesde0/files"
 	"github.com/MALPV/Tutorial-Godesde0/funciones"
@@ -79,7 +80,7 @@ func main() {
 
 	} else {
 
-
+		defer_panic.PanicExample()
 
 	}
 }
