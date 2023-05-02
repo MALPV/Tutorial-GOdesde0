@@ -16,6 +16,7 @@ import (
 	"github.com/MALPV/Tutorial-Godesde0/teclado"
 	"github.com/MALPV/Tutorial-Godesde0/users"
 	"github.com/MALPV/Tutorial-Godesde0/variables"
+	"github.com/MALPV/Tutorial-Godesde0/webserver"
 )
 
 var showOldFunctions bool
@@ -81,8 +82,6 @@ func main() {
 
 		defer_panic.PanicExample()
 
-	} else {
-
 		channel := make(chan bool)
 		go goroutines.ShowStringLower("Martina", channel)
 
@@ -90,7 +89,10 @@ func main() {
 			<- channel
 		}()
 
-		fmt.Println("Principal")
+
+	} else {
+
+		webserver.MyWebServer()
 
 	}
 }
