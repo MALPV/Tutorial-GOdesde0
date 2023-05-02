@@ -9,6 +9,7 @@ import (
 	"github.com/MALPV/Tutorial-Godesde0/files"
 	"github.com/MALPV/Tutorial-Godesde0/funciones"
 	"github.com/MALPV/Tutorial-Godesde0/iteraciones"
+	"github.com/MALPV/Tutorial-Godesde0/mapas"
 	"github.com/MALPV/Tutorial-Godesde0/teclado"
 	"github.com/MALPV/Tutorial-Godesde0/variables"
 )
@@ -60,10 +61,11 @@ func main() {
 
 		arreglos_slices.UseArrays()
 		arreglos_slices.ShowSlices()
+		arreglos_slices.Capacity()
 
 	} else {
 
-		arreglos_slices.Capacity()
+		mapas.CreateMaps()
 
 	}
 }
