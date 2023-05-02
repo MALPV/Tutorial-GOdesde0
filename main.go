@@ -85,7 +85,12 @@ func main() {
 
 		channel := make(chan bool)
 		go goroutines.ShowStringLower("Martina", channel)
-		<- channel
+
+		defer func ()  {
+			<- channel
+		}()
+
+		fmt.Println("Principal")
 
 	}
 }
