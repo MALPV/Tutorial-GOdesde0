@@ -12,6 +12,7 @@ import (
 	"github.com/MALPV/Tutorial-Godesde0/goroutines"
 	"github.com/MALPV/Tutorial-Godesde0/iteraciones"
 	"github.com/MALPV/Tutorial-Godesde0/mapas"
+	"github.com/MALPV/Tutorial-Godesde0/middleware"
 	"github.com/MALPV/Tutorial-Godesde0/modelos"
 	"github.com/MALPV/Tutorial-Godesde0/teclado"
 	"github.com/MALPV/Tutorial-Godesde0/users"
@@ -85,14 +86,15 @@ func main() {
 		channel := make(chan bool)
 		go goroutines.ShowStringLower("Martina", channel)
 
-		defer func ()  {
-			<- channel
+		defer func() {
+			<-channel
 		}()
 
+		webserver.MyWebServer()
 
 	} else {
 
-		webserver.MyWebServer()
+		middleware.MyMiddleware()
 
 	}
 }
