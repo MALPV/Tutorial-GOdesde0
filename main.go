@@ -9,6 +9,7 @@ import (
 	"github.com/MALPV/Tutorial-Godesde0/ejercicios"
 	"github.com/MALPV/Tutorial-Godesde0/files"
 	"github.com/MALPV/Tutorial-Godesde0/funciones"
+	"github.com/MALPV/Tutorial-Godesde0/goroutines"
 	"github.com/MALPV/Tutorial-Godesde0/iteraciones"
 	"github.com/MALPV/Tutorial-Godesde0/mapas"
 	"github.com/MALPV/Tutorial-Godesde0/modelos"
@@ -78,9 +79,16 @@ func main() {
 		ejercicios.HumanoEscribiendo(Carolina)
 		ejercicios.EstaVivo(Carolina)
 
+		defer_panic.PanicExample()
+
 	} else {
 
-		defer_panic.PanicExample()
+		go goroutines.ShowStringLower("Martina Florencia")
+
+		fmt.Println("Starting")
+
+		var x string
+		fmt.Scanln(&x)
 
 	}
 }
