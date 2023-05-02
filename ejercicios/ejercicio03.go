@@ -4,15 +4,7 @@ import (
 	"fmt"
 
 	"github.com/MALPV/Tutorial-Godesde0/interfaces"
-	"github.com/MALPV/Tutorial-Godesde0/modelos"
 )
-
-func PersonaEstaLeyendo(persona modelos.Persona) {
-
-	persona.Leer()
-	fmt.Printf("La persona esta leyendo? %t\n", persona.EstaLeyendo)
-
-}
 
 func HumanoEscribiendo(humando interfaces.Humano) {
 

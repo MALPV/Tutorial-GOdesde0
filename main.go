@@ -69,8 +69,6 @@ func main() {
 
 		users.CreateAdmin()
 
-	} else {
-
 		Marcos := new(modelos.Hombre)
 		ejercicios.HumanoEscribiendo(Marcos)
 		ejercicios.EstaVivo(Marcos)
@@ -78,6 +76,10 @@ func main() {
 		Carolina := new(modelos.Mujer)
 		ejercicios.HumanoEscribiendo(Carolina)
 		ejercicios.EstaVivo(Carolina)
+
+	} else {
+
+
 
 	}
 }
