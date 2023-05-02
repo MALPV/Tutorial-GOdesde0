@@ -6,6 +6,7 @@ import (
 
 	"github.com/MALPV/Tutorial-Godesde0/ejercicios"
 	"github.com/MALPV/Tutorial-Godesde0/files"
+	"github.com/MALPV/Tutorial-Godesde0/funciones"
 	"github.com/MALPV/Tutorial-Godesde0/iteraciones"
 	"github.com/MALPV/Tutorial-Godesde0/teclado"
 	"github.com/MALPV/Tutorial-Godesde0/variables"
@@ -49,12 +50,15 @@ func main() {
 		fmt.Println(ejercicios.CalculateMultiplicationTable())
 
 		files.SaveTable()
-
 		files.AddNewTable()
+		files.ReadFile()
+
+		funciones.Calculate()
+		funciones.UseClosure(7)
+		funciones.Exponential(2)
 
 	} else {
 
-		files.ReadFile()
 
 	}
 }
