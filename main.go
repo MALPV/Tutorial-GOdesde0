@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"runtime"
 
+	"github.com/MALPV/Tutorial-Godesde0/arreglos_slices"
 	"github.com/MALPV/Tutorial-Godesde0/ejercicios"
 	"github.com/MALPV/Tutorial-Godesde0/files"
 	"github.com/MALPV/Tutorial-Godesde0/funciones"
@@ -57,8 +58,12 @@ func main() {
 		funciones.UseClosure(7)
 		funciones.Exponential(2)
 
+		arreglos_slices.UseArrays()
+		arreglos_slices.ShowSlices()
+
 	} else {
 
+		arreglos_slices.Capacity()
 
 	}
 }
