@@ -11,6 +11,7 @@ import (
 	"github.com/MALPV/Tutorial-Godesde0/iteraciones"
 	"github.com/MALPV/Tutorial-Godesde0/mapas"
 	"github.com/MALPV/Tutorial-Godesde0/teclado"
+	"github.com/MALPV/Tutorial-Godesde0/users"
 	"github.com/MALPV/Tutorial-Godesde0/variables"
 )
 
@@ -63,9 +64,11 @@ func main() {
 		arreglos_slices.ShowSlices()
 		arreglos_slices.Capacity()
 
+		mapas.CreateMaps()
+
 	} else {
 
-		mapas.CreateMaps()
+		users.CreateAdmin()
 
 	}
 }
