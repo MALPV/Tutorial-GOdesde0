@@ -10,6 +10,7 @@ import (
 	"github.com/MALPV/Tutorial-Godesde0/funciones"
 	"github.com/MALPV/Tutorial-Godesde0/iteraciones"
 	"github.com/MALPV/Tutorial-Godesde0/mapas"
+	"github.com/MALPV/Tutorial-Godesde0/modelos"
 	"github.com/MALPV/Tutorial-Godesde0/teclado"
 	"github.com/MALPV/Tutorial-Godesde0/users"
 	"github.com/MALPV/Tutorial-Godesde0/variables"
@@ -66,9 +67,17 @@ func main() {
 
 		mapas.CreateMaps()
 
+		users.CreateAdmin()
+
 	} else {
 
-		users.CreateAdmin()
+		Marcos := new(modelos.Hombre)
+		ejercicios.HumanoEscribiendo(Marcos)
+		ejercicios.EstaVivo(Marcos)
+
+		Carolina := new(modelos.Mujer)
+		ejercicios.HumanoEscribiendo(Carolina)
+		ejercicios.EstaVivo(Carolina)
 
 	}
 }
