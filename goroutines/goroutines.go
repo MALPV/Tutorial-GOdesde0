@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func ShowStringLower(s string) {
+func ShowStringLower(s string, channel chan bool) {
 
 	separator := strings.Split(s, "")
 
@@ -14,5 +14,7 @@ func ShowStringLower(s string) {
 		time.Sleep(1000 * time.Millisecond)
 		fmt.Println(char)
 	}
+
+	channel <- true
 
 }

@@ -83,12 +83,14 @@ func main() {
 
 	} else {
 
-		go goroutines.ShowStringLower("Martina Florencia")
-
+		channel := make(chan bool)
+		go goroutines.ShowStringLower("Martina Florencia", channel)
+		
 		fmt.Println("Starting")
 
-		var x string
-		fmt.Scanln(&x)
+		resultChannel := <- channel
+
+		fmt.Printf("channel %t", resultChannel)
 
 	}
 }
